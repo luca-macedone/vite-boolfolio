@@ -1,2 +1,8 @@
 // Import all of Bootstrap's CSS
 @import "/node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background-image: linear-gradient(45deg, #0c0c20, #2a304c, #4c567c, #717fb1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

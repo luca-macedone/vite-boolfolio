@@ -1,0 +1,62 @@
+@use './variables' as *;
+@use '../general.scss' as *;
+
+.ms-bg-dark {
+    background-color: $ms-dark;
+}
+
+.ms-bg-light {
+    background-color: $ms-light;
+}
+
+.ms-bg-primary {
+    background-color: $ms-primary;
+}
+
+.ms-bg-secondary {
+    background-color: $ms-secondary;
+}
+
+.ms-bg-tertiary {
+    background-color: $ms-tertiary;
+}
+
+.ms-text-dark {
+    color: $ms-dark;
+}
+
+.ms-text-light {
+    color: $ms-light;
+}
+
+.ms-text-primary {
+    color: $ms-primary;
+}
+
+.ms-text-secondary {
+    color: $ms-secondary;
+}
+
+.ms-text-tertiary {
+    color: $ms-tertiary;
+}
+
+.ms-border-dark {
+    border-color: $ms-dark !important;
+}
+
+.ms-border-light {
+    border-color: $ms-light !important;
+}
+
+.ms-border-primary {
+    border-color: $ms-primary !important;
+}
+
+.ms-border-secondary {
+    border-color: $ms-secondary !important;
+}
+
+.ms-border-tertiary {
+    border-color: $ms-tertiary !important;
+}

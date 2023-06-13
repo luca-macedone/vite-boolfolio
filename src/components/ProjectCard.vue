@@ -13,15 +13,15 @@ export default {
 <template>
     <div class="col-12 col-md-6 col-lg-3">
         <!-- <img :src="data.image" alt=""> -->
-        <div class="card h-100 rounded-0 border-0 shadow">
+        <div class="card h-100 rounded-0 ms-border-secondary ms-bg-light ms-text-dark shadow">
             <img :src="base_url + 'storage/' + data.image" class="object-fit-cover rounded-0 border-0" height="300" alt="">
-            <div class="card-body">
-                <div class="card-title fs-4 text-uppercase pb-2">{{ data.title }}</div>
+            <div class="card-body d-flex flex-column justify-content-baseline gap-2">
+                <div class="card-title fs-4 text-uppercase">{{ data.title }}</div>
 
-                <div class="d-flex justify-content-center align-items-center gap-2 pb-3">
-                    <span class="badge rounded-pill text-bg-dark p-2" v-for="technology in data.technologies">{{
-                        technology.name
-                    }}</span>
+                <div class="d-flex justify-content-start align-items-center gap-2">
+                    <span class="badge rounded-pill ms-bg-primary p-2" v-for="technology in data.technologies">
+                        {{ technology.name }}
+                    </span>
                 </div>
 
 
@@ -31,4 +31,6 @@ export default {
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../styles/partials/ProjectCard' as *;
+</style>
