@@ -24,7 +24,7 @@ export default {
                             {{ technology.name }}
                         </span>
                     </div>
-                    <div>{{ data.description }}</div>
+                    <div>{{ data.description.substring(0, 100) + ' ...' }}</div>
                 </div>
             </div>
         </RouterLink>

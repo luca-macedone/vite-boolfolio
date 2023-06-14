@@ -25,7 +25,7 @@ export const store = reactive({
             .get(url)
             .then(result => {
                 this.project_overview = result.data.project;
-                // console.log(this.project_overview);
+                console.log(this.project_overview);
             })
             .catch(error => {
                 console.error(error);
