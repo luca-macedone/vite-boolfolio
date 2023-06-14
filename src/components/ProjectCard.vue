@@ -14,7 +14,7 @@ export default {
     <div class="col-12 col-md-6 col-lg-3">
         <!-- <img :src="data.image" alt=""> -->
         <div class="card h-100 rounded-0 ms-border-secondary ms-bg-light ms-text-dark shadow">
-            <img :src="base_url + 'storage/' + data.image" class="object-fit-cover rounded-0 border-0" height="300" alt="">
+            <img :src="base_url + 'storage/' + data.image" class="project_image rounded-0 border-0" height="300" alt="">
             <div class="card-body d-flex flex-column justify-content-baseline gap-2">
                 <div class="card-title fs-4 text-uppercase">{{ data.title }}</div>
 
