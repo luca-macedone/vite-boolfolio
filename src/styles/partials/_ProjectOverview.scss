@@ -1,0 +1,45 @@
+@use './common' as *;
+@use './variables' as *;
+
+.background {
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $ms-dark;
+    border-right: 1px solid $ms-secondary;
+    // min-height: 100vh;
+    // height: 100%;
+    filter: brightness(80%);
+    transition: .25s all ease-in-out;
+
+    &:hover {
+        filter: brightness(100%);
+    }
+}
+
+#title {
+    font-weight: light;
+}
+
+#type {
+    text-decoration: underline;
+    text-decoration-color: $ms-secondary;
+    font-weight: lighter;
+}
+
+#description {
+    text-align: justify;
+}
+
+#repository,
+#website {
+    background-color: $ms-secondary;
+    color: $ms-light;
+    text-decoration: none;
+    transition: .25s all ease-in-out;
+
+    &:hover {
+        background-color: $ms-tertiary;
+        color: $ms-primary;
+    }
+}
