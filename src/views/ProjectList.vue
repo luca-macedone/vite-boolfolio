@@ -31,6 +31,6 @@ export default {
     </main>
 </template>
 
-<style lang="sass" scoped>
-
+<style lang="scss" scoped>
+@use '../styles/partials/ProjectList' as *;
 </style>

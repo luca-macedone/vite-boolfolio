@@ -8,4 +8,6 @@ export default {
     <h1>home</h1>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../styles/partials/AppHome' as *;
+</style>

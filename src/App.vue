@@ -18,5 +18,5 @@ export default {
 </template>
 
 <style lang="scss">
-@use './styles/partials/ProjectList' as *;
+@use './styles/partials/common.scss' as *;
 </style>

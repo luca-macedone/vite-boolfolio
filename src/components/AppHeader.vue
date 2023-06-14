@@ -42,4 +42,6 @@ export default {
     </header>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use '../styles/partials/AppHeader' as *;
+</style>
