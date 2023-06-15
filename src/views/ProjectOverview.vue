@@ -67,6 +67,20 @@ export default {
                         <p class="ms-text-light fw-light" id="description">
                             {{ project_overview?.description }}
                         </p>
+                        <div class="d-flex flex-column justify-content-between align-items-start gap-1">
+                            <div class="ms-text-light fw-light">
+                                Year of development:
+                                <span class="fw-semibold ms-text-secondary fs-5 ms-3">
+                                    {{ project_overview?.year_of_development }}
+                                </span>
+                            </div>
+                            <div class="ms-text-light fw-light">
+                                Developer:
+                                <span class="fw-semibold ms-text-secondary fs-5 ms-3">
+                                    {{ project_overview?.user.name }}
+                                </span>
+                            </div>
+                        </div>
                         <div class="d-flex justify-content-between align-items-center py-4"
                             v-if="project_overview.repository_url || project_overview.website_url">
                             <a class="rounded-0 px-5 py-3" :href="project_overview.repository_url" type="button"
