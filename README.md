@@ -1,6 +1,6 @@
 # TODO
 
-- aggiungere pagina 403 ✅
+- aggiungere pagina 404 ✅
 - aggiungere cards in loading state ✅
 - aggiungere pagination ✅
 - popolare homepage
