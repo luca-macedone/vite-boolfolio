@@ -24,7 +24,7 @@ export default {
 
 <template>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark ms-bg-secondary shadow">
+        <nav class="navbar navbar-expand-lg navbar-dark ms-bg-secondary shadow p-0">
             <div class="container">
                 <a class="navbar-brand" href="#">Luca Macedone</a>
                 <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="collapse"
@@ -35,7 +35,7 @@ export default {
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                         <li class="nav-item" v-for="item in menuItems">
-                            <RouterLink class="nav-link" :to="{ name: item.routeName }">
+                            <RouterLink class="nav-link ms-text-light py-3 px-4" :to="{ name: item.routeName }">
                                 {{ item.label }}
                             </RouterLink>
                         </li>

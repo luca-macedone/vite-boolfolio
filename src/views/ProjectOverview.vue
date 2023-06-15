@@ -19,7 +19,7 @@ export default {
                     if (result.data.status) {
                         this.project_overview = result.data.project;
                         // console.log(this.project_overview);
-                        console.log(result.data.status);
+                        // console.log(result.data.status);
                     } else {
                         this.$router.push({ name: 'not-found' })
                     }
@@ -70,13 +70,13 @@ export default {
                         <div class="d-flex flex-column justify-content-between align-items-start gap-1">
                             <div class="ms-text-light fw-light">
                                 Year of development:
-                                <span class="fw-semibold ms-text-secondary fs-5 ms-3">
+                                <span class="fs-5 ms-3" id="year">
                                     {{ project_overview?.year_of_development }}
                                 </span>
                             </div>
                             <div class="ms-text-light fw-light">
                                 Developer:
-                                <span class="fw-semibold ms-text-secondary fs-5 ms-3">
+                                <span class="fs-5 ms-3" id="author">
                                     {{ project_overview?.user.name }}
                                 </span>
                             </div>

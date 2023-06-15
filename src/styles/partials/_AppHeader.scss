@@ -1,2 +1,13 @@
 @use './common' as *;
 @use './variables' as *;
+
+.nav-link {
+    border-bottom: 1px solid $ms-secondary !important;
+}
+
+.router-link-active,
+.router-link-exact-active {
+    color: $ms-primary !important;
+    background-color: $ms-tertiary !important;
+    border-bottom: 1px solid $ms-primary !important;
+}
