@@ -1,2 +1,22 @@
 @use './common' as *;
 @use './variables' as *;
+
+.ms-pagination {
+    background-color: transparent;
+    border: none !important;
+
+    .ms-pagination-item {
+        border: none !important;
+
+        .ms-pagination-link {
+            color: $ms-light !important;
+            background-color: $ms-secondary;
+            // border: 1px solid $ms-primary;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+}
