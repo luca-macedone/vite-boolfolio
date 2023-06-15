@@ -1,13 +1,44 @@
 @use './common' as *;
 @use './variables' as *;
 
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgba($ms-secondary, .6);
+
+    .ms-modal {
+        height: 80vh;
+        width: 80vw;
+        overflow: auto;
+
+        .close-btn {
+            background-color: $ms-secondary;
+            color: #dc3545;
+
+            position: fixed;
+            top: 7rem;
+            right: 8rem;
+
+            &:hover {
+                background-color: $ms-primary;
+                color: $ms-light;
+            }
+        }
+    }
+}
+
 .background {
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $ms-dark;
-    border-right: 1px solid $ms-secondary;
-    border-left: 1px solid $ms-secondary;
+    border: 1px solid $ms-secondary;
     // min-height: 100vh;
     // height: 100%;
     filter: brightness(80%);
@@ -15,6 +46,16 @@
 
     &:hover {
         filter: brightness(100%);
+
+        .zoom-icon {
+            visibility: visible;
+        }
+    }
+
+    .zoom-icon {
+        color: $ms-secondary;
+        visibility: hidden;
+        transition: .25s all ease-in-out;
     }
 }
 

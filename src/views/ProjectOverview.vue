@@ -9,6 +9,7 @@ export default {
             store,
             single_project_url: store.base_url + store.projects_api + this.$route.params.slug,
             project_overview: null,
+            image_modal: false,
         };
     },
     methods: {
@@ -38,13 +39,29 @@ export default {
 </script>
 
 <template>
-    <div v-if="project_overview">
-        <!-- {{ store.project_overview.title }} -->
-        <div class="container">
+    <div class="py-5" v-if="project_overview">
+
+        <!-- Image Modal -->
+        <div class="wrapper d-flex justify-content-center align-items-center"
+            :class="image_modal ? 'd-inline-flex' : 'd-none'">
+            <div class="ms-modal">
+                <button class="btn close-btn" @click="image_modal = !image_modal">
+                    <font-awesome-icon icon="fa-solid fa-x" class="fa-2x p-2" />
+                </button>
+                <img :src="store.base_url + 'storage/' + project_overview.image" :alt="project_overview.title"
+                    class="ms-modal-img" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <section class="container">
             <div class="row">
-                <div class="col background shadow"
+                <div class="col background shadow d-flex justify-content-center align-items-center"
                     :style="`background-image: url(${store.base_url + 'storage/' + project_overview.image});`"
-                    v-if="project_overview.image !== null">
+                    v-if="project_overview.image !== null" @click="image_modal = !image_modal">
+
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="zoom-icon fa-2x ms-text-dark" />
+
                 </div>
                 <div class="col h-100">
                     <div class="px-3 py-3">
@@ -95,7 +112,7 @@ export default {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <div class="vh-100 vw-100 ms-bg-tertiary d-flex justify-content-center align-items-center" v-else>
         <h1 class="ms-text-light">Loading...</h1>
