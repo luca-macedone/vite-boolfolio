@@ -60,3 +60,7 @@
 .ms-border-tertiary {
     border-color: $ms-tertiary !important;
 }
+
+.body {
+    min-height: calc(100vh - 57px - 212px);
+}

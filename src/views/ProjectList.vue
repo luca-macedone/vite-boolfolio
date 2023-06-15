@@ -46,7 +46,7 @@ export default {
                     <div class="row g-4 py-3">
                         <div class="col-12 col-md-6 col-lg-4" v-for="placeholder in store.project_placeholders">
                             <div class="card h-100 rounded-0 ms-border-secondary ms-bg-light ms-text-dark shadow">
-                                <img src="..." class="project_image rounded-0 border-0" height="300" alt="">
+                                <img class="project_image rounded-0 border-0" height="300" alt="">
                                 <div class="card-body card-img-overlay rounded-0">
                                     <div
                                         class="h-100 d-flex flex-column justify-content-between align-items-start placeholder-glow">
