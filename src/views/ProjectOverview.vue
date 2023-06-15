@@ -1,16 +1,36 @@
 <script>
 import { RouterLink } from 'vue-router';
 import { store } from '../store';
+import axios from 'axios';
 export default {
     name: "ProjectOverview",
     data() {
         return {
             store,
             single_project_url: store.base_url + store.projects_api + this.$route.params.slug,
+            project_overview: null,
         };
     },
+    methods: {
+        getProjectOverview(url) {
+            axios
+                .get(url)
+                .then(result => {
+                    if (result.data.status) {
+                        this.project_overview = result.data.project;
+                        // console.log(this.project_overview);
+                        console.log(result.data.status);
+                    } else {
+                        this.$router.push({ name: 'not-found' })
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                })
+        },
+    },
     mounted() {
-        this.store.getProjectOverview(this.single_project_url);
+        this.getProjectOverview(this.single_project_url);
         // console.log(this.single_project_url);
     },
     components: { RouterLink }
@@ -18,43 +38,43 @@ export default {
 </script>
 
 <template>
-    <div v-if="store.project_overview">
+    <div v-if="project_overview">
         <!-- {{ store.project_overview.title }} -->
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col background shadow"
-                    :style="`background-image: url(${store.base_url + 'storage/' + store.project_overview.image});`"
-                    v-if="store.project_overview.image !== null">
+                    :style="`background-image: url(${store.base_url + 'storage/' + project_overview.image});`"
+                    v-if="project_overview.image !== null">
                 </div>
                 <div class="col h-100">
                     <div class="px-3 py-3">
                         <h1 class="display-5 text-center ms-text-light mb-3" id="title">
-                            {{ store.project_overview?.title }}
+                            {{ project_overview?.title }}
                         </h1>
                         <div class="d-flex justify-content-between align-items-center gap-3 pb-2">
                             <div class="d-flex justify-content-start align-items-baseline gap-3">
                                 <div class="text-center ms-text-light fs-5 mb-2" id="type">
-                                    {{ store.project_overview.type.name }}
+                                    {{ project_overview.type.name }}
                                 </div>
                             </div>
                             <div class="d-flex gap-2">
                                 <div class="badge rounded-pill ms-bg-secondary fw-light px-4 py-2"
-                                    v-for="technology in store.project_overview.technologies">
+                                    v-for="technology in project_overview.technologies">
                                     {{ technology.name }}
                                 </div>
                             </div>
                         </div>
                         <p class="ms-text-light fw-light" id="description">
-                            {{ store.project_overview?.description }}
+                            {{ project_overview?.description }}
                         </p>
                         <div class="d-flex justify-content-between align-items-center py-4"
-                            v-if="store.project_overview.repository_url || store.project_overview.website_url">
-                            <a class="rounded-0 px-5 py-3" :href="store.project_overview.repository_url" type="button"
-                                id="repository" v-if="store.project_overview.repository_url">
+                            v-if="project_overview.repository_url || project_overview.website_url">
+                            <a class="rounded-0 px-5 py-3" :href="project_overview.repository_url" type="button"
+                                id="repository" v-if="project_overview.repository_url">
                                 Repository
                             </a>
-                            <a class="rounded-0 px-5 py-3" :href="store.project_overview.website_url" type="button"
-                                id="website" v-if="store.project_overview.website_url">
+                            <a class="rounded-0 px-5 py-3" :href="project_overview.website_url" type="button" id="website"
+                                v-if="project_overview.website_url">
                                 Website
                             </a>
                         </div>
