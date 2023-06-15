@@ -89,6 +89,7 @@ export default {
             <div class="w-100 d-flex justify-content-center align-items-center" v-if="next_page__url || prev_page__url">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination ms-pagination">
+                        <!-- Previous Page -->
                         <li class="page-item ms-pagination-item" v-if="prev_page__url">
                             <a class="page-link ms-pagination-link rounded-0" @click="getProjects(prev_page__url)"
                                 aria-label="Prev">
@@ -99,10 +100,11 @@ export default {
                         <li class="page-item ms-pagination-item" v-if="prev_page__url"><a
                                 class="page-link ms-pagination-link rounded-0" @click="getProjects(prev_page__url)">{{
                                     current_page__number - 1 }}</a></li>
-                        <li class="page-item ms-pagination-item"><a class="page-link ms-pagination-link rounded-0"
-                                @click="getProjects(`http://127.0.0.1:8000:/api/projects/?page=${current_page__number}`)">{{
-                                    current_page__number }}</a>
+                        <!-- Current Page -->
+                        <li class="page-item ms-pagination-item"><a class="page-link ms-pagination-link rounded-0">
+                                {{ current_page__number }}</a>
                         </li>
+                        <!-- Next Page -->
                         <li class="page-item ms-pagination-item" v-if="next_page__url"><a
                                 class="page-link ms-pagination-link rounded-0" @click="getProjects(next_page__url)">{{
                                     current_page__number + 1 }}</a></li>
