@@ -13,7 +13,9 @@ export default {
 
 <template>
     <AppHeader />
-    <router-view class="body" />
+    <main class="ms-body">
+        <router-view />
+    </main>
     <AppFooter />
 </template>
 
