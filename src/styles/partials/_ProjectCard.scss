@@ -6,22 +6,20 @@
     &:hover {
         .project_image {
 
-            filter: brightness(80%);
+            filter: brightness(100%);
 
         }
     }
 
     .card-body {
         color: $ms-light;
-        background-color: rgba($ms-dark, .5);
+        background-color: rgba($ms-dark, .4);
     }
 
     .project_image {
         object-fit: cover;
         object-position: top;
-        filter: brightness(50%);
+        filter: brightness(80%);
         transition: .25s all ease-in-out;
-
-
     }
 }
