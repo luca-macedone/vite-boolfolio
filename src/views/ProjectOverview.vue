@@ -100,11 +100,11 @@ export default {
                         </div>
                         <div class="d-flex justify-content-between align-items-center py-4"
                             v-if="project_overview.repository_url || project_overview.website_url">
-                            <a class="rounded-0 px-5 py-3" :href="project_overview.repository_url" type="button"
-                                id="repository" v-if="project_overview.repository_url">
+                            <a class="px-5 py-3" :href="project_overview.repository_url" type="button" id="repository"
+                                v-if="project_overview.repository_url">
                                 Repository
                             </a>
-                            <a class="rounded-0 px-5 py-3" :href="project_overview.website_url" type="button" id="website"
+                            <a class="px-5 py-3" :href="project_overview.website_url" type="button" id="website"
                                 v-if="project_overview.website_url">
                                 Website
                             </a>
