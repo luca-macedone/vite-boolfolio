@@ -48,8 +48,11 @@ export default {
                 <button class="btn close-btn" @click="image_modal = !image_modal">
                     <font-awesome-icon icon="fa-solid fa-x" class="fa-2x p-2" />
                 </button>
-                <img :src="store.base_url + 'storage/' + project_overview.image" :alt="project_overview.title"
-                    class="ms-modal-img" loading="lazy">
+                <div class="ms-modal-img-wrapper">
+                    <img :src="store.base_url + 'storage/' + project_overview.image" :alt="project_overview.title"
+                        class="ms-modal-img" loading="lazy">
+
+                </div>
             </div>
         </div>
 

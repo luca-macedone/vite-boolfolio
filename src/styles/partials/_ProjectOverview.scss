@@ -13,17 +13,34 @@
     background-color: rgba($ms-secondary, .6);
 
     .ms-modal {
-        height: 80vh;
-        width: 80vw;
-        overflow: auto;
+        height: 74vh;
+        width: 76vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ms-modal-img-wrapper {
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+            text-align: center;
+
+            .ms-modal-img {
+
+                z-index: 540;
+                zoom: .5;
+                object-fit: cover;
+            }
+        }
 
         .close-btn {
             background-color: $ms-secondary;
             color: #dc3545;
 
             position: fixed;
-            top: 3.5rem;
-            right: 7.5rem;
+            top: 4rem;
+            right: 4rem;
+            z-index: 550;
             border-radius: .25rem;
 
             &:hover {
