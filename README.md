@@ -7,3 +7,4 @@
 - popolare contacts
 - popolare footer
 - ottimizzare il responsive
+- aggiungere zoom per immagine fullsize
