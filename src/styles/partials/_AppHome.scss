@@ -1,2 +1,92 @@
 @use './common' as *;
 @use './variables' as *;
+
+h1 {
+    // text-shadow: -1.5rem 1rem 1rem $ms-secondary;
+    color: $ms-light;
+}
+
+p {
+    text-align: justify;
+}
+
+.profile-img-wrapper {
+    max-height: 400px;
+    aspect-ratio: 1/1;
+    border-radius: .25rem;
+    overflow: hidden;
+    box-shadow: -1.5rem 1rem 3rem $ms-secondary;
+
+    .profile-img {
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.technologies-wrapper {
+    max-height: 100px;
+    width: 100%;
+    background-color: rgba($ms-tertiary, .35);
+    // background-image: linear-gradient(to right, rgba(#222243, .25), rgba(#1d1e3c, .25), rgba(#191b35, .25), rgba(#15172f, .5), rgba(#111328, .5), rgba(#111328, .75), rgba(#111328, .75), rgba(#111328, .5), rgba(#15172f, .5), rgba(#191b35, .25), rgba(#1d1e3c, .25), rgba(#222243, .25));
+
+    img {
+        aspect-ratio: 1 / 1;
+        width: 40px;
+    }
+}
+
+.carousel {
+    overflow: hidden;
+    border-radius: .25rem;
+
+    &:hover .carousel-item {
+        filter: brightness(100%);
+
+    }
+
+    .carousel-item {
+        max-height: 400px;
+        filter: brightness(80%);
+        transition: .25s all ease-in-out;
+
+
+        position: relative;
+
+        .carousel-caption {
+            height: 100%;
+            width: 100%;
+            // background-color: rgba($ms-tertiary, .55);
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            h4 {
+                background-color: rgba($ms-secondary, .75);
+                padding: 1rem;
+                border-radius: .25rem;
+            }
+
+            .badge {
+                background-color: rgba($ms-secondary, .75);
+            }
+        }
+    }
+}
+
+.call-to-action-btn {
+    display: block;
+    width: max-content;
+    background-color: $ms-secondary;
+    color: $ms-light;
+    text-decoration: none;
+    transition: .25s all ease-in-out;
+    border-radius: .25rem;
+    padding: .5rem 5rem;
+    font-size: 1.75rem;
+    font-weight: lighter;
+
+    &:hover {
+        background-color: $ms-tertiary;
+        color: $ms-primary;
+    }
+}
