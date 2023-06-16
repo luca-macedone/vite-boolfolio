@@ -91,8 +91,7 @@ export default {
                     <ul class="pagination ms-pagination">
                         <!-- Previous Page -->
                         <li class="page-item ms-pagination-item" v-if="prev_page__url">
-                            <a class="page-link ms-pagination-link rounded-0" @click="getProjects(prev_page__url)"
-                                aria-label="Prev">
+                            <a class="page-link ms-pagination-link" @click="getProjects(prev_page__url)" aria-label="Prev">
                                 <!-- <span aria-hidden="true">&laquo;</span> -->
                                 <font-awesome-icon aria-hidden="true" icon="fa-solid fa-chevron-left" />
                             </a>
@@ -109,8 +108,7 @@ export default {
                                 class="page-link ms-pagination-link rounded-0" @click="getProjects(next_page__url)">{{
                                     current_page__number + 1 }}</a></li>
                         <li class="page-item ms-pagination-item" v-if="next_page__url">
-                            <a class="page-link ms-pagination-link rounded-0" @click="getProjects(next_page__url)"
-                                aria-label="Next">
+                            <a class="page-link ms-pagination-link" @click="getProjects(next_page__url)" aria-label="Next">
                                 <!-- <span aria-hidden="true">&raquo;</span> -->
                                 <font-awesome-icon aria-hidden="true" icon="fa-solid fa-chevron-right" />
                             </a>
