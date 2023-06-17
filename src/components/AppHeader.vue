@@ -1,9 +1,11 @@
 <script>
+import { store } from '../store';
 export default {
     name: 'AppHeader',
     data() {
         return {
-            menuItems: [
+            store,
+            menuItems_en: [
                 {
                     label: 'Home',
                     routeName: 'home',
@@ -17,8 +19,37 @@ export default {
                     routeName: 'contacts',
                 },
             ],
+            menuItems_it: [
+                {
+                    label: 'Home',
+                    routeName: 'home',
+                },
+                {
+                    label: 'Progetti',
+                    routeName: 'projects',
+                },
+                {
+                    label: 'Contatti',
+                    routeName: 'contacts',
+                },
+            ],
+            menuItems: null,
         }
     },
+    methods: {
+        setLocalization() {
+            if (store.localization_input) {
+                // true --> italian
+                this.menuItems = this.menuItems_it
+            } else {
+                // false --> english
+                this.menuItems = this.menuItems_en
+            }
+        },
+    },
+    mounted() {
+        this.setLocalization();
+    }
 }
 </script>
 
@@ -38,6 +69,15 @@ export default {
                             <RouterLink class="nav-link ms-text-light py-3 px-4" :to="{ name: item.routeName }">
                                 {{ item.label }}
                             </RouterLink>
+                        </li>
+                        <li class="nav-item d-flex align-items-center ms-4">
+
+                            <img :src="`/src/assets/images/${store.localization_input ? 'italy-icon.svg' : 'united-kingdom-icon.svg'}`"
+                                height="30" width="35" class="rounded mt-1"
+                                :title="store.localization_input ? 'Italiano' : 'English'"
+                                :alt="store.localization_input ? 'Italiano' : 'English'"
+                                @click="store.localization_input = !store.localization_input; setLocalization()">
+
                         </li>
                     </ul>
                 </div>

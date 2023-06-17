@@ -13,11 +13,36 @@
     background-color: rgba($ms-secondary, .6);
 
     .ms-modal {
-        height: 74vh;
-        width: 76vw;
+        height: 90vh;
+        width: 90vW;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .close-btn {
+            background-color: $ms-secondary;
+            color: #dc3545;
+
+            position: fixed;
+            top: 2rem;
+            right: calc(50% - 33px);
+            z-index: 550;
+            border-radius: .25rem;
+
+            &:hover {
+                background-color: $ms-primary;
+                color: $ms-light;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            height: 74vh;
+            width: 76vw;
+
+            .close-btn {
+                top: 7rem;
+            }
+        }
 
         .ms-modal-img-wrapper {
             height: 100%;
@@ -26,26 +51,9 @@
             text-align: center;
 
             .ms-modal-img {
-
                 z-index: 540;
                 zoom: .5;
                 object-fit: cover;
-            }
-        }
-
-        .close-btn {
-            background-color: $ms-secondary;
-            color: #dc3545;
-
-            position: fixed;
-            top: 4rem;
-            right: 4rem;
-            z-index: 550;
-            border-radius: .25rem;
-
-            &:hover {
-                background-color: $ms-primary;
-                color: $ms-light;
             }
         }
     }

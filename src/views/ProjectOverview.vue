@@ -2,6 +2,8 @@
 import { RouterLink } from 'vue-router';
 import { store } from '../store';
 import axios from 'axios';
+import en from '../locales/en.json';
+import it from '../locales/it.json';
 export default {
     name: "ProjectOverview",
     data() {
@@ -10,6 +12,9 @@ export default {
             single_project_url: store.base_url + store.projects_api + this.$route.params.slug,
             project_overview: null,
             image_modal: false,
+            project_overview_en: en.project_overview,
+            project_overview_it: it.project_overview,
+            content: null,
         };
     },
     methods: {
@@ -29,6 +34,31 @@ export default {
                     console.error(error);
                 })
         },
+        setLocalization() {
+            if (store.localization_input) {
+                // true --> italian
+                this.content = this.project_overview_it
+            } else {
+                // false --> english
+                this.content = this.project_overview_en
+            }
+        },
+        getContent(sentence) {
+            this.setLocalization();
+            switch (sentence) {
+                case 'loading_sentence':
+                    return this.content.loading_sentence;
+                case 'repository_button':
+                    return this.content.repository_button;
+                case 'website_button':
+                    return this.content.website_button;
+                case 'year_of_development_sentence':
+                    return this.content.year_of_development_sentence;
+                case 'developer_sentence':
+                    return this.content.developer_sentence;
+
+            }
+        }
     },
     mounted() {
         this.getProjectOverview(this.single_project_url);
@@ -58,7 +88,7 @@ export default {
 
         <!-- Main Content -->
         <section class="container">
-            <div class="row">
+            <div class="row row-cols-1 row-cols-xl-2">
                 <div class="col background shadow d-flex justify-content-center align-items-center"
                     :style="`background-image: url(${store.base_url + 'storage/' + project_overview.image});`"
                     v-if="project_overview.image !== null" @click="image_modal = !image_modal">
@@ -89,13 +119,13 @@ export default {
                         </p>
                         <div class="d-flex flex-column justify-content-between align-items-start gap-1">
                             <div class="ms-text-light fw-light">
-                                Year of development:
+                                {{ getContent('year_of_development_sentence') }} :
                                 <span class="fs-5 ms-3" id="year">
                                     {{ project_overview?.year_of_development }}
                                 </span>
                             </div>
                             <div class="ms-text-light fw-light">
-                                Developer:
+                                {{ getContent('developer_sentence') }} :
                                 <span class="fs-5 ms-3" id="author">
                                     {{ project_overview?.user.name }}
                                 </span>
@@ -105,11 +135,11 @@ export default {
                             v-if="project_overview.repository_url || project_overview.website_url">
                             <a class="px-5 py-3" :href="project_overview.repository_url" type="button" id="repository"
                                 v-if="project_overview.repository_url">
-                                Repository
+                                {{ getContent('repository_button') }}
                             </a>
                             <a class="px-5 py-3" :href="project_overview.website_url" type="button" id="website"
                                 v-if="project_overview.website_url">
-                                Website
+                                {{ getContent('website_button') }}
                             </a>
                         </div>
                     </div>
@@ -118,7 +148,7 @@ export default {
         </section>
     </div>
     <div class="vh-100 vw-100 ms-bg-tertiary d-flex justify-content-center align-items-center" v-else>
-        <h1 class="ms-text-light">Loading...</h1>
+        <h1 class="ms-text-light">{{ getContent('loading_sentence') }}</h1>
     </div>
 </template>
 

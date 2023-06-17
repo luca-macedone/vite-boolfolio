@@ -2,6 +2,8 @@
 import ProjectCard from '../components/ProjectCard.vue';
 import { store } from '../store';
 import axios from 'axios';
+import en from '../locales/en.json';
+import it from '../locales/it.json';
 export default {
     name: 'ProjectList',
     components: {
@@ -19,6 +21,9 @@ export default {
             prev_page__url: null,
             next_page__url: null,
             total_projects: 0,
+            home_en: en.projects,
+            home_it: it.projects,
+            content: null,
 
         }
     },
@@ -46,6 +51,22 @@ export default {
                     console.error(error);
                 })
         },
+        setLocalization() {
+            if (store.localization_input) {
+                // true --> italian
+                this.content = this.home_it
+            } else {
+                // false --> english
+                this.content = this.home_en
+            }
+        },
+        getContent(sentence) {
+            this.setLocalization();
+            switch (sentence) {
+                case 'project_list_title':
+                    return this.content.project_list_title;
+            }
+        }
     },
     mounted() {
         this.getProjects(this.projects_url);
@@ -57,7 +78,7 @@ export default {
     <main>
         <section class="">
             <div class="container py-5">
-                <h1 class="ms-text-light py-3">My projects</h1>
+                <h1 class="ms-text-light py-3">{{ getContent('project_list_title') }}</h1>
                 <div class="row g-4" v-if="projects_list">
                     <ProjectCard :data="project" v-for="project in projects_list" />
                 </div>

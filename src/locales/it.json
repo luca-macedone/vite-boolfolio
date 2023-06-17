@@ -1,0 +1,26 @@
+{
+    "app_header": {},
+    "app_footer": {},
+    "project_card": {},
+    "home": {
+        "main_title": "Ciao! Mi chiamo Luca Macedone",
+        "main_paragraph_1": "Sono un Jr. FullStack Web Developer \n e sono sempre in cerca di nuovi stimoli e sfide",
+        "main_paragraph_2": "Sono nato nell'agosto del '97, a Imperia, Liguria. \n Sono un appassionato di videogiochi e cerco sempre di salire di levello nelle mie abilità!",
+        "technologies_title": "Tecnologie",
+        "latest_projects": "I miei ultimi progetti",
+        "carousel_button_prev": "Precedente",
+        "carousel_button_next": "Successivo",
+        "call_to_action_button": "Guarda altro"
+    },
+    "projects": {
+        "project_list_title": "I miei progetti"
+    },
+    "project_overview": {
+        "loading_sententce": "Caricamento in corso...",
+        "repository_button": "Guarda la Repository",
+        "website_button": "Guarda il sito",
+        "year_of_development_sentence": "Anno di sviluppo",
+        "developer_sentence": "Sviluppatore"
+    },
+    "contacts": {}
+}
