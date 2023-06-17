@@ -24,7 +24,7 @@ p {
 }
 
 .technologies-wrapper {
-    max-height: 100px;
+    min-height: 100px;
     width: 100%;
     box-shadow: -1rem 1rem 2.5rem $ms-secondary;
     background-color: rgba($ms-tertiary, .2);

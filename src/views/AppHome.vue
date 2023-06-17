@@ -118,8 +118,8 @@ export default {
                             <div
                                 class="carousel-caption d-none d-md-flex flex-column justify-content-between align-items-start p-3">
                                 <h4>{{ project.title }}</h4>
-                                <div class="d-flex justify-content-center py-3 align-items-center gap-2 flex-wrap">
-                                    <span class="badge rounded-pill px-3 py-2 p-2"
+                                <div class="d-flex justify-content-center align-items-center flex-wrap g-3">
+                                    <span class="badge rounded-pill px-3 py-2 p- d-inline-flex"
                                         v-for="technology in project.technologies">
                                         {{ technology.name }}
                                     </span>
