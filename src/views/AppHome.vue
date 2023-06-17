@@ -85,17 +85,20 @@ export default {
             <div class="col-12 col-lg-8 d-flex flex-column justify-content-between align-items-center">
                 <div class="w-100">
                     <h1 class="fw-light text-center py-4 ">Hi! I'm Luca Macedone</h1>
-                    <p class=" ms-text-light fw-light">
-                        I'm a <span class="fs-5">Jr. FullStack Web Developer</span>
-                        and i'm always in search of new motivations for develop my skills. <br />
-                        I'm born in August '97, in Imperia, Liguria.
+                    <p class=" ms-text-light fw-light text-center">
+                        I'm a Jr. FullStack Web Developer
+                        and i'm always in search of new motivations for develop my skills.
+                    </p>
+                    <p class=" ms-text-light fw-light text-center">
+                        I'm born in August '97, in Imperia, Liguria. I'm a passionate gamer and i'm always in charge to
+                        level up my skills!
                     </p>
                 </div>
 
                 <div class="w-100">
                     <h3 class="ms-text-light mt-5">Technologies</h3>
                     <div
-                        class="technologies-wrapper d-flex justify-content-center align-items-center gap-3 flex-wrap p-3 my-3 shadow rounded">
+                        class="technologies-wrapper d-flex justify-content-center align-items-center gap-3 flex-wrap p-3 my-3 rounded">
                         <img :src="store.images_folder + icon.svg" class="img-fluid" :alt="icon.name"
                             v-for="icon in technologies" loading="lazy" :title="icon.name">
                     </div>

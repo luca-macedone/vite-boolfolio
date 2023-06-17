@@ -26,7 +26,8 @@ p {
 .technologies-wrapper {
     max-height: 100px;
     width: 100%;
-    background-color: rgba($ms-tertiary, .35);
+    box-shadow: -1rem 1rem 2.5rem $ms-secondary;
+    background-color: rgba($ms-tertiary, .2);
     // background-image: linear-gradient(to right, rgba(#222243, .25), rgba(#1d1e3c, .25), rgba(#191b35, .25), rgba(#15172f, .5), rgba(#111328, .5), rgba(#111328, .75), rgba(#111328, .75), rgba(#111328, .5), rgba(#15172f, .5), rgba(#191b35, .25), rgba(#1d1e3c, .25), rgba(#222243, .25));
 
     img {
