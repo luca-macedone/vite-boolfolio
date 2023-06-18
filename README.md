@@ -4,7 +4,7 @@
 - aggiungere cards in loading state ✅
 - aggiungere pagination ✅
 - aggiungere localizzazione multilingua ✅
-- aggiungere campi nel db per progetti in multilingua
+- aggiungere campi nel db per progetti in multilingua ✅
 - popolare homepage
   - aggiungere ulteriori dettagli dopo i progetti
 - popolare contacts
