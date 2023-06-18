@@ -58,7 +58,16 @@ export default {
                     return this.content.developer_sentence;
 
             }
-        }
+        },
+        showDescription() {
+            if (store.localization_input) {
+                // true --> italian
+                return this.project_overview.description_it ? this.project_overview.description_it : null;
+            } else {
+                // false --> english
+                return this.project_overview.description_en ? this.project_overview.description_en : null;
+            }
+        },
     },
     mounted() {
         this.getProjectOverview(this.single_project_url);
@@ -115,7 +124,7 @@ export default {
                             </div>
                         </div>
                         <p class="ms-text-light fw-light" id="description">
-                            {{ project_overview?.description }}
+                            {{ showDescription() }}
                         </p>
                         <div class="d-flex flex-column justify-content-between align-items-start gap-1">
                             <div class="ms-text-light fw-light">

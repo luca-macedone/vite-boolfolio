@@ -1,12 +1,25 @@
 <script>
+import { store } from '../store'
 export default {
     name: "ProjectCard",
     props: ['data'],
     data() {
         return {
+            store,
             base_url: 'http://127.0.0.1:8000/',
             description: false,
         }
+    },
+    methods: {
+        showDescription() {
+            if (store.localization_input) {
+                // true --> italian
+                return this.data.description_it
+            } else {
+                // false --> english
+                return this.data.description_en
+            }
+        },
     },
 }
 </script>
@@ -29,7 +42,7 @@ export default {
                                     {{ technology.name }}
                                 </span>
                             </div>
-                            <div :class="description ? '' : 'd-none'">{{ data.description.substring(0, 100) + ' ...' }}
+                            <div :class="description ? '' : 'd-none'">{{ showDescription().substring(0, 100) + ' ...' }}
                             </div>
                         </div>
                     </div>
