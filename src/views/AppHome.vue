@@ -148,7 +148,7 @@ export default {
                     <div class="carousel-inner">
                         <div class="carousel-item active" v-for="project in latest_projects">
                             <img :src="store.base_url + 'storage/' + project.image" class="d-block img-fluid"
-                                :alt="project.title" loading="lazy">
+                                :alt="project.title">
                             <div
                                 class="carousel-caption d-none d-md-flex flex-column justify-content-between align-items-start p-3">
                                 <h4>{{ project.title }}</h4>
