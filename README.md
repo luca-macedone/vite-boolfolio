@@ -5,9 +5,11 @@
 - aggiungere pagination ✅
 - aggiungere localizzazione multilingua ✅
 - aggiungere campi nel db per progetti in multilingua ✅
-- popolare homepage
-  - aggiungere ulteriori dettagli dopo i progetti
-- popolare contacts
-- popolare footer
+- popolare homepage ✅
+  - aggiungere ulteriori dettagli dopo i progetti ✅
+- popolare contacts ✅
+- popolare footer ✅
 - ottimizzare il responsive ✅
-- aggiungere zoom per immagine fullsize
+- aggiungere zoom per immagine fullsize 
+- ottimizzare le performance
+- aggiungere traduzione inglese in diversi elementi 
