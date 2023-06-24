@@ -6,6 +6,8 @@ export const store = reactive({
     latest_projects_api: 'api/latest_projects',
     project_placeholders: 6,
     images_folder: '/src/assets/images/',
-    localization_input: false,
+    technologies_folder: 'technologies/',
+    svg_folder: 'svg/',
+    localization_input: true,
 
 });
