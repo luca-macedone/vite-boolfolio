@@ -5,12 +5,16 @@
     "home": {
         "main_title": "Ciao! Mi chiamo Luca Macedone",
         "main_paragraph_1": "Sono un Jr. FullStack Web Developer \n e sono sempre in cerca di nuovi stimoli e sfide",
-        "main_paragraph_2": "Sono nato nell'agosto del '97, a Imperia, Liguria. \n Sono un appassionato di videogiochi e cerco sempre di salire di levello nelle mie abilità!",
+        "main_paragraph_2": "Sono ligure, appassionato di videogiochi e cerco sempre di salire di levello nelle mie abilità!",
         "technologies_title": "Tecnologie",
         "latest_projects": "I miei ultimi progetti",
         "carousel_button_prev": "Precedente",
         "carousel_button_next": "Successivo",
-        "call_to_action_button": "Guarda altro"
+        "watch_more_call_to_action": "Guarda altro",
+        "download_cv_call_to_action": "Scarica Curriculum",
+        "download_cv_paragraph": "Sono ben felice di entrare in contatto con nuove realtà, è disponibile il mio curriculm per sapere qualcosa in più su di me e sulla mia carriera.",
+        "about_me_title": "Chi sono",
+        "about_me_paragraph": "Mi reputo una persona realista, creativa, professionale e fortemente spinta dalla curiosità per il mondo che circonda. \n Sono appassionato di tecnologia e sono felice di conoscere nuove persone e collaborare per raggiungere un obiettivo comune. \n Oltre ai videogiochi, sono appassionato anche di giochi da tavolo e dell'improvvisazione che scaturisce giocando a Dungeons & Dragons. \n La musica accompagna le mie sessioni di coding, prefiribilmente musica elettronica o rock."
     },
     "projects": {
         "project_list_title": "I miei progetti"

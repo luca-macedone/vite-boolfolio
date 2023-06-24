@@ -5,12 +5,13 @@
     "home": {
         "main_title": "Hi! I'm Luca Macedone",
         "main_paragraph_1": "I'm a Jr. FullStack Web Developer and i'm always in search of new motivations and challenges.",
-        "main_paragraph_2": "I'm born in August '97, in Imperia, Liguria. I'm a passionate gamer and i'm always in charge to level up my skills!",
+        "main_paragraph_2": "I'm from Liguria, a passionate gamer and i'm always in charge to level up my skills!",
         "technologies_title": "Technlogies",
         "latest_projects": "My latest projects",
         "carousel_button_prev": "Previous",
         "carousel_button_next": "Next",
-        "call_to_action_button": "See more"
+        "call_to_action_button": "See more",
+        "about_me": ""
     },
     "projects": {
         "project_list_title": "My projects"
