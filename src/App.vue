@@ -13,9 +13,11 @@ export default {
 
 <template>
     <AppHeader />
+
     <main class="ms-body">
         <router-view />
     </main>
+
     <AppFooter />
 </template>
 
