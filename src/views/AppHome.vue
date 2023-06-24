@@ -9,6 +9,10 @@ export default {
         return {
             store,
             latest_projects: null,
+            home_en: en.home,
+            home_it: it.home,
+            content: null,
+            curriculum_path: 'Luca_Macedone_CV.pdf',
             technologies: [
                 {
                     name: 'HTML',
@@ -47,9 +51,6 @@ export default {
                     svg: 'laravel-icon.svg',
                 },
             ],
-            home_en: en.home,
-            home_it: it.home,
-            content: null,
         }
     },
     methods: {
@@ -106,7 +107,7 @@ export default {
     mounted() {
         let api_call = this.store.base_url + this.store.latest_projects_api;
         this.getLatestProjects(api_call);
-        // console.log(this.home)
+        // console.log(this.store.base_url)
     },
 }
 </script>
@@ -123,7 +124,7 @@ export default {
         <div class="row g-3">
             <div class="col-12 col-xl-4 d-flex justify-content-center justify-content-xl-start">
                 <div class="profile-img-wrapper">
-                    <img src="../assets/images/profile_pic.JPG" class="profile-img" alt="Simply me">
+                    <img src="../assets/images/profile_pic.JPG" class="profile-img" loading="lazy" alt="Simply me">
                 </div>
             </div>
             <div class="col-12 col-xl-8 d-flex flex-column justify-content-between align-items-center">
@@ -194,9 +195,9 @@ export default {
             </div>
             <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-start align-items-lg-center">
                 <p class="ms-text-light fw-light p-lg-3">{{ getContent('download_cv_paragraph') }}</p>
-                <RouterLink class="call-to-action-btn" :to="{ name: 'projects' }">
+                <a class="call-to-action-btn border-0" :href="store.base_url + store.download_api + curriculum_path">
                     {{ getContent('download_cv_call_to_action') }}
-                </RouterLink>
+                </a>
             </div>
         </div>
     </div>
