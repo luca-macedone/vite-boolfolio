@@ -90,8 +90,16 @@ export default {
                     return this.content.carousel_button_prev;
                 case 'carousel_button_next':
                     return this.content.carousel_button_next;
-                case 'call_to_action_button':
-                    return this.content.call_to_action_button;
+                case 'watch_more_call_to_action':
+                    return this.content.watch_more_call_to_action;
+                case 'download_cv_call_to_action':
+                    return this.content.download_cv_call_to_action;
+                case 'about_me_title':
+                    return this.content.about_me_title;
+                case 'about_me_paragraph':
+                    return this.content.about_me_paragraph;
+                case 'download_cv_paragraph':
+                    return this.content.download_cv_paragraph;
             }
         }
     },
@@ -112,7 +120,7 @@ export default {
         </div>
     </section> -->
     <div class="container py-5">
-        <div class="row">
+        <div class="row g-3">
             <div class="col-12 col-xl-4 d-flex justify-content-center justify-content-xl-start">
                 <div class="profile-img-wrapper">
                     <img src="../assets/images/profile_pic.JPG" class="profile-img" alt="Simply me">
@@ -133,8 +141,9 @@ export default {
                     <h2 class="ms-text-light fw-light mt-5">{{ getContent('technologies_title') }}</h2>
                     <div
                         class="technologies-wrapper d-flex justify-content-center align-items-center gap-3 flex-wrap p-3 mt-3 rounded">
-                        <img :src="store.images_folder + icon.svg" class="img-fluid cursor-pointer" :alt="icon.name"
-                            v-for="icon in technologies" loading="lazy" :title="icon.name">
+                        <img :src="store.images_folder + store.svg_folder + store.technologies_folder + icon.svg"
+                            class="img-fluid cursor-pointer" :alt="icon.name" v-for="icon in technologies" loading="lazy"
+                            :title="icon.name">
                     </div>
                 </div>
             </div>
@@ -146,7 +155,8 @@ export default {
                     @mouseenter="latest_project_details = !latest_project_details"
                     @mouseleave="latest_project_details = !latest_project_details">
                     <div class="carousel-inner">
-                        <div class="carousel-item active" v-for="project in latest_projects">
+                        <div class="carousel-item" :class="index === 0 ? 'active' : ''"
+                            v-for="(project, index) in latest_projects">
                             <img :src="store.base_url + 'storage/' + project.image" class="d-block img-fluid"
                                 :alt="project.title">
                             <div
@@ -175,7 +185,17 @@ export default {
                     </button>
                 </div>
                 <RouterLink class="call-to-action-btn mt-4" :to="{ name: 'projects' }">
-                    {{ getContent('call_to_action_button') }}
+                    {{ getContent('watch_more_call_to_action') }}
+                </RouterLink>
+            </div>
+            <div class="col-12 col-lg-8">
+                <h2 class="ms-text-light fw-light mt-5">{{ getContent('about_me_title') }}</h2>
+                <p class="ms-text-light fw-light">{{ getContent('about_me_paragraph') }}</p>
+            </div>
+            <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-start align-items-lg-center">
+                <p class="ms-text-light fw-light p-lg-3">{{ getContent('download_cv_paragraph') }}</p>
+                <RouterLink class="call-to-action-btn" :to="{ name: 'projects' }">
+                    {{ getContent('download_cv_call_to_action') }}
                 </RouterLink>
             </div>
         </div>

@@ -20,6 +20,9 @@ p {
     .profile-img {
         max-height: 100%;
         object-fit: cover;
+        background-color: $ms-primary;
+        filter: brightness(86%);
+        border: 1rem solid rgba($ms-secondary, .25);
     }
 }
 
@@ -87,10 +90,12 @@ p {
 
 .call-to-action-btn {
     display: block;
-    width: max-content;
+    width: 100%;
+    // max-width: max-content;
     background-color: $ms-secondary;
     color: $ms-light;
     text-decoration: none;
+    text-align: center;
     transition: .25s all ease-in-out;
     border-radius: .25rem;
     padding: .5rem 5rem;
@@ -100,5 +105,10 @@ p {
     &:hover {
         background-color: $ms-tertiary;
         color: $ms-primary;
+    }
+
+    @media screen and (min-width: 992px) {
+        min-width: min-content;
+        max-width: 50%;
     }
 }
