@@ -1,0 +1,65 @@
+@use './common' as *;
+@use './variables' as *;
+
+#send_email_btn,
+#reset_form_btn {
+    background-color: $ms-secondary;
+    color: $ms-light;
+    text-decoration: none;
+    transition: .25s all ease-in-out;
+    border-radius: .25rem;
+
+    &:hover {
+        background-color: $ms-tertiary;
+        color: $ms-primary;
+    }
+}
+
+.ms-alert-success {
+    background-color: $ms-primary;
+    color: $ms-secondary;
+    border-radius: .25rem;
+}
+
+.ms-alert-danger {
+    background-color: rgba($ms-secondary, .6);
+    color: $ms-danger;
+    border-radius: .25rem;
+}
+
+.disabled {
+    border: none !important;
+}
+
+.laoding-icon {
+    transition: .25s all ease-in-out;
+}
+
+.spin {
+
+    animation-name: spin;
+    animation-duration: .4s;
+    animation-iteration-count: infinite;
+
+    @keyframes spin {
+        0% {
+            rotate: 0deg;
+        }
+
+        25% {
+            rotate: 90deg;
+        }
+
+        50% {
+            rotate: 180deg;
+        }
+
+        75% {
+            rotate: 270deg;
+        }
+
+        100% {
+            rotate: 360deg;
+        }
+    }
+}
