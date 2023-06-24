@@ -12,3 +12,7 @@ body {
 
     font-family: 'Mulish', sans-serif;
 }
+
+.ms-body {
+    min-height: calc(100vh - 150px) !important;
+}
