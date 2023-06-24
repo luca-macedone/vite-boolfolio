@@ -11,3 +11,35 @@
     background-color: $ms-tertiary !important;
     border-bottom: 1px solid $ms-primary !important;
 }
+
+.navbar-brand {
+    svg {
+        g {
+            fill: $ms-primary !important;
+        }
+    }
+}
+
+.flags-wrapper {
+    // width: 80px !important;
+    overflow-x: hidden !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .flags-divider {
+        height: 40px;
+        border-left: 3px solid $ms-primary;
+        border-radius: 2px;
+    }
+
+    .flag-selector-left,
+    .flag-selector-right {
+        border-radius: .25rem !important;
+        filter: brightness(30%);
+    }
+
+    .active-flag {
+        filter: brightness(100%);
+    }
+}
