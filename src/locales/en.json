@@ -10,8 +10,11 @@
         "latest_projects": "My latest projects",
         "carousel_button_prev": "Previous",
         "carousel_button_next": "Next",
-        "call_to_action_button": "See more",
-        "about_me": ""
+        "watch_more_call_to_action": "See more",
+        "download_cv_call_to_action": "Download the Curriculum",
+        "download_cv_paragraph": "I'm very happy to enter in contact with new realities, it's available my curriculum vitae to know more about me and my carreer.",
+        "about_me_title": "About Me",
+        "about_me_paragraph": "I consider myself a realistic, creative, professional person, driven by a strong curiosity for the world around me. I am passionate about technology and I am happy to meet new people and collaborate to achieve a common goal. In addition to video games, I am also passionate about board games and the improvisation that comes from playing Dungeons & Dragons. Music accompanies my coding sessions, preferably electronic or rock music."
     },
     "projects": {
         "project_list_title": "My projects"
@@ -23,5 +26,16 @@
         "year_of_development_sentence": "Year of development",
         "developer_sentence": "Developer"
     },
-    "contacts": {}
+    "contacts": {
+        "main_title": "Contact Me!",
+        "page_description": "By filling out this form, I will receive your message via email, and I will respond as quickly as possible. Thank you for your interest!",
+        "form_name_title": "Name",
+        "form_name_description": "Please type your name here",
+        "form_email_title": "Email",
+        "form_email_description": "Please type your email here",
+        "form_message_title": "Message",
+        "form_submit_button": "Send",
+        "message_sended_banner_title": "Email sended!",
+        "message_sended_banner_sentence": "Thank you for contacting me, I will respond as quickly as possible."
+    }
 }

@@ -11,7 +11,7 @@
         "carousel_button_prev": "Precedente",
         "carousel_button_next": "Successivo",
         "watch_more_call_to_action": "Guarda altro",
-        "download_cv_call_to_action": "Scarica Curriculum",
+        "download_cv_call_to_action": "Scarica il Curriculum",
         "download_cv_paragraph": "Sono ben felice di entrare in contatto con nuove realtà, è disponibile il mio curriculm per sapere qualcosa in più su di me e sulla mia carriera.",
         "about_me_title": "Chi sono",
         "about_me_paragraph": "Mi reputo una persona realista, creativa, professionale e fortemente spinta dalla curiosità per il mondo che circonda. \n Sono appassionato di tecnologia e sono felice di conoscere nuove persone e collaborare per raggiungere un obiettivo comune. \n Oltre ai videogiochi, sono appassionato anche di giochi da tavolo e dell'improvvisazione che scaturisce giocando a Dungeons & Dragons. \n La musica accompagna le mie sessioni di coding, prefiribilmente musica elettronica o rock."
@@ -26,5 +26,16 @@
         "year_of_development_sentence": "Anno di sviluppo",
         "developer_sentence": "Sviluppatore"
     },
-    "contacts": {}
+    "contacts": {
+        "main_title": "Contattami!",
+        "page_description": "Compilando questo form, riceverò via mail il tuo messaggio, risponderò il più velocemente possibile e ti ringrazio per l'interesse dimostrato!",
+        "form_name_title": "Nome",
+        "form_name_description": "Per favore inserisci il tuo nome",
+        "form_email_title": "Email",
+        "form_email_description": "Per favore inserisci la tua mail",
+        "form_message_title": "Messaggio",
+        "form_submit_button": "Invia",
+        "message_sended_banner_title": "Email inviata!",
+        "message_sended_banner_sentence": "Grazie per avermi contattato, mi impegnerò a rispondere il prima possibile."
+    }
 }
