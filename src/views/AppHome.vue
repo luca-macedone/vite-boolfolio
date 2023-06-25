@@ -47,6 +47,14 @@ export default {
                     svg: 'mysql-icon.svg',
                 },
                 {
+                    name: 'PHP MyAdmin',
+                    svg: 'php-my-admin-icon.svg',
+                },
+                {
+                    name: 'Ajax',
+                    svg: 'ajax-icon.svg',
+                },
+                {
                     name: 'Laravel',
                     svg: 'laravel-icon.svg',
                 },
@@ -190,7 +198,7 @@ export default {
                 </RouterLink>
             </div>
             <div class="col-12 col-lg-8">
-                <h2 class="ms-text-light fw-light mt-5">{{ getContent('about_me_title') }}</h2>
+                <h2 class="ms-text-light fw-light mt-5 mb-3">{{ getContent('about_me_title') }}</h2>
                 <p class="ms-text-light fw-light">{{ getContent('about_me_paragraph') }}</p>
             </div>
             <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-start align-items-lg-center">
