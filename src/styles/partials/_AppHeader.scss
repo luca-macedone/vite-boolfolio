@@ -13,10 +13,11 @@
 }
 
 .navbar-brand {
-    svg {
-        g {
-            fill: $ms-primary !important;
-        }
+    height: 57px;
+
+    img {
+        object-fit: contain;
+        width: 300px;
     }
 }
 

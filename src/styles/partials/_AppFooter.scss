@@ -1,2 +1,10 @@
 @use './common' as *;
 @use './variables' as *;
+
+.footer-link {
+    transition: .25s all ease-in-out;
+
+    &:hover {
+        scale: 1.2;
+    }
+}

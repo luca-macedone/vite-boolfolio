@@ -3,11 +3,22 @@
 
 
 .card {
+    transition: .25s all ease-in-out;
+
     &:hover {
         .project_image {
 
             filter: brightness(100%);
 
+        }
+
+        .card-body {
+            font-weight: bolder;
+            background-color: rgba($ms-dark, .2);
+        }
+
+        .description {
+            font-weight: lighter;
         }
     }
 
@@ -22,4 +33,11 @@
         filter: brightness(80%);
         transition: .25s all ease-in-out;
     }
+}
+
+.description {
+    font-weight: light;
+    background-color: rgba($ms-dark, .25);
+    border-radius: .25rem;
+    padding: .5rem;
 }

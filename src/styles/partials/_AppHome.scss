@@ -41,6 +41,11 @@ p {
     // border: 4px solid $ms-secondary;
 
     img {
+        &:hover {
+            scale: 1.3;
+        }
+
+        transition: .25s all ease-in-out;
         aspect-ratio: 1 / 1;
         width: 50px;
     }
@@ -99,7 +104,7 @@ p {
     transition: .25s all ease-in-out;
     border-radius: .25rem;
     padding: .5rem 5rem;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: lighter;
 
     &:hover {
@@ -111,4 +116,8 @@ p {
         min-width: min-content;
         max-width: 50%;
     }
+}
+
+p {
+    line-height: 2.2rem;
 }
