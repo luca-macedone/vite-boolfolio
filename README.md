@@ -12,4 +12,4 @@
 - ottimizzare il responsive ✅
 - aggiungere zoom per immagine fullsize 
 - ottimizzare le performance
-- aggiungere traduzione inglese in diversi elementi 
+- aggiungere traduzione inglese in diversi elementi ✅
