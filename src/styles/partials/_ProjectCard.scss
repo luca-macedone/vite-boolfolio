@@ -13,12 +13,19 @@
         }
 
         .card-body {
-            font-weight: bolder;
+            // font-weight: bolder;
             background-color: rgba($ms-dark, .2);
         }
 
         .description {
             font-weight: lighter;
+        }
+
+        .title {
+            width: 100%;
+            background-color: rgba($ms-dark, .25);
+            border-radius: .25rem;
+            padding: .5rem;
         }
     }
 
