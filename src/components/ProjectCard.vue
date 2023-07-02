@@ -34,10 +34,14 @@ export default {
                     height="300" alt="">
                 <div class="card-body rounded card-img-overlay">
                     <div class="h-100 d-flex flex-column justify-content-between align-items-start">
-                        <div class="card-title fs-4 text-uppercase">{{ data.title }}</div>
+                        <div class="card-title fs-4 text-uppercase">
+                            <div class="title">
+                                {{ data.title }}
+                            </div>
+                        </div>
                         <div class="d-flex flex-column align-items-start gap-3">
                             <div class="d-flex justify-content-start align-items-center gap-2 flex-wrap">
-                                <span class="badge rounded-pill ms-bg-light ms-text-dark px-3 py-2 p-2"
+                                <span class="badge rounded-pill ms-bg-secondary ms-text-light px-3 py-2 p-2"
                                     v-for="technology in data.technologies">
                                     {{ technology.name }}
                                 </span>
