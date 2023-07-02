@@ -1,16 +1,16 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
-import en from '../locales/en.json';
-import it from '../locales/it.json';
+import en from '../locales/en-EN/home.json';
+import it from '../locales/it-IT/home.json';
 export default {
     name: 'AppHome',
     data() {
         return {
             store,
             latest_projects: null,
-            home_en: en.home,
-            home_it: it.home,
+            home_en: en,
+            home_it: it,
             content: null,
             curriculum_path: 'Luca_Macedone_CV.pdf',
             technologies: [
@@ -83,6 +83,7 @@ export default {
             }
         },
         getContent(sentence) {
+            // console.log(this.content);
             this.setLocalization();
             switch (sentence) {
                 case 'main_title':

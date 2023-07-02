@@ -1,0 +1,12 @@
+{
+    "main_title": "Contattami!",
+    "page_description": "Compilando questo form, riceverò via mail il tuo messaggio, risponderò il più velocemente possibile e ti ringrazio per l'interesse dimostrato!",
+    "form_name_title": "Nome",
+    "form_name_description": "Per favore inserisci il tuo nome",
+    "form_email_title": "Email",
+    "form_email_description": "Per favore inserisci la tua mail",
+    "form_message_title": "Messaggio",
+    "form_submit_button": "Invia",
+    "message_sended_banner_title": "Email inviata!",
+    "message_sended_banner_sentence": "Grazie per avermi contattato, mi impegnerò a rispondere il prima possibile."
+}

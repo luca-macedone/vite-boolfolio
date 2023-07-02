@@ -2,8 +2,8 @@
 import { RouterLink } from 'vue-router';
 import { store } from '../store';
 import axios from 'axios';
-import en from '../locales/en.json';
-import it from '../locales/it.json';
+import en from '../locales/en-EN/project_overview.json';
+import it from '../locales/it-IT/project_overview.json';
 export default {
     name: "ProjectOverview",
     data() {
@@ -12,8 +12,8 @@ export default {
             single_project_url: store.base_url + store.projects_api + this.$route.params.slug,
             project_overview: null,
             image_modal: false,
-            project_overview_en: en.project_overview,
-            project_overview_it: it.project_overview,
+            project_overview_en: en,
+            project_overview_it: it,
             content: null,
         };
     },

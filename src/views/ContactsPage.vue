@@ -1,8 +1,8 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
-import en from '../locales/en.json';
-import it from '../locales/it.json';
+import en from '../locales/en-EN/contacts.json';
+import it from '../locales/it-IT/contacts.json';
 
 export default {
     name: 'ContactsPage',
@@ -18,8 +18,8 @@ export default {
                 haveErrors: false,
                 sentences: {},
             },
-            home_en: en.contacts,
-            home_it: it.contacts,
+            home_en: en,
+            home_it: it,
             content: null,
         }
     },

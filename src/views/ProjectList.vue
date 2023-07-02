@@ -2,8 +2,8 @@
 import ProjectCard from '../components/ProjectCard.vue';
 import { store } from '../store';
 import axios from 'axios';
-import en from '../locales/en.json';
-import it from '../locales/it.json';
+import en from '../locales/en-EN/projects.json';
+import it from '../locales/it-IT/projects.json';
 export default {
     name: 'ProjectList',
     components: {
@@ -21,8 +21,8 @@ export default {
             prev_page__url: null,
             next_page__url: null,
             total_projects: 0,
-            home_en: en.projects,
-            home_it: it.projects,
+            home_en: en,
+            home_it: it,
             content: null,
 
         }

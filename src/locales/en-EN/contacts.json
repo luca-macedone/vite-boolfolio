@@ -1,0 +1,12 @@
+{
+    "main_title": "Contact Me!",
+    "page_description": "By filling out this form, I will receive your message via email, and I will respond as quickly as possible. Thank you for your interest!",
+    "form_name_title": "Name",
+    "form_name_description": "Please type your name here",
+    "form_email_title": "Email",
+    "form_email_description": "Please type your email here",
+    "form_message_title": "Message",
+    "form_submit_button": "Send",
+    "message_sended_banner_title": "Email sended!",
+    "message_sended_banner_sentence": "Thank you for contacting me, I will respond as quickly as possible."
+}
